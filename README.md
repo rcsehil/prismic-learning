@@ -3,6 +3,9 @@ All Habit content is served from Prismic.io
 
 ## Working with the project
 ```bash
+# install dependencies
+npm install
+
 # start the dev server
 npm run dev
 
@@ -13,7 +16,13 @@ npx @slicemachine/init@latest
 npm run test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the site.
+With the dev server running, open [http://localhost:3000](http://localhost:3000) with your browser to see the site.
+
+## Content Modeling
+
+Habit models a habit, with fields for name, description, main image, benefits, difficulty level, implementation tips, and category. Category is a content relationship to the Habit Category type.
+
+Habit Category models a category, with fields for name and description.
 
 ## GenAI Collaboration
 
@@ -45,3 +54,14 @@ While AI assists in development, it does not replace:
 - Human creativity
 - Critical problem-solving
 - Comprehensive understanding of project requirements
+
+## Future improvements
+
+- Add a CI/CD pipeline.
+- Deploy to Vercel.
+- Refactor the Habits Library page:
+ - separate network calls from rendering
+ - add pagination
+ - implement robust error handling
+
+- Design the habits detail page.
