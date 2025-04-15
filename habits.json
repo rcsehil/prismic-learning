@@ -1,0 +1,164 @@
+{
+  "habits": [
+    {
+      "category": "Personal Growth",
+      "habits": [
+        {
+          "name": "Read daily",
+          "description": "Commit to reading for at least 30 minutes every day",
+          "benefits": [
+            "Expands knowledge",
+            "Improves vocabulary",
+            "Enhances critical thinking"
+          ]
+        },
+        {
+          "name": "Practice meditation",
+          "description": "Meditate for 10-15 minutes daily to reduce stress and improve mindfulness",
+          "benefits": [
+            "Reduces anxiety",
+            "Improves focus",
+            "Enhances emotional regulation"
+          ]
+        },
+        {
+          "name": "Journal regularly",
+          "description": "Write down thoughts, goals, and reflections daily",
+          "benefits": [
+            "Increases self-awareness",
+            "Helps process emotions",
+            "Tracks personal growth"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Physical Health",
+      "habits": [
+        {
+          "name": "Exercise 30 minutes daily",
+          "description": "Engage in consistent physical activity",
+          "benefits": [
+            "Improves cardiovascular health",
+            "Boosts energy levels",
+            "Enhances mental well-being"
+          ]
+        },
+        {
+          "name": "Stay hydrated",
+          "description": "Drink at least 8 glasses of water daily",
+          "benefits": [
+            "Supports metabolism",
+            "Improves skin health",
+            "Enhances cognitive function"
+          ]
+        },
+        {
+          "name": "Get 7-8 hours of sleep",
+          "description": "Maintain a consistent sleep schedule",
+          "benefits": [
+            "Improves recovery",
+            "Enhances cognitive performance",
+            "Supports immune system"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Mental Wellness",
+      "habits": [
+        {
+          "name": "Practice mindfulness",
+          "description": "Be present and aware of your thoughts and surroundings",
+          "benefits": [
+            "Reduces stress",
+            "Improves emotional intelligence",
+            "Enhances decision-making"
+          ]
+        },
+        {
+          "name": "Practice positive self-talk",
+          "description": "Replace negative thoughts with constructive and encouraging language",
+          "benefits": [
+            "Boosts self-confidence",
+            "Reduces anxiety",
+            "Improves resilience"
+          ]
+        },
+        {
+          "name": "Limit social media",
+          "description": "Set boundaries for social media consumption",
+          "benefits": [
+            "Reduces digital stress",
+            "Improves focus",
+            "Enhances real-world connections"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Productivity",
+      "habits": [
+        {
+          "name": "Plan your day the night before",
+          "description": "Create a to-do list and prioritize tasks",
+          "benefits": [
+            "Reduces morning stress",
+            "Increases productivity",
+            "Provides clear direction"
+          ]
+        },
+        {
+          "name": "Practice time blocking",
+          "description": "Allocate specific time slots for different tasks",
+          "benefits": [
+            "Improves focus",
+            "Reduces procrastination",
+            "Enhances time management"
+          ]
+        },
+        {
+          "name": "Take regular breaks",
+          "description": "Use techniques like Pomodoro to maintain productivity",
+          "benefits": [
+            "Prevents burnout",
+            "Maintains mental clarity",
+            "Improves overall efficiency"
+          ]
+        }
+      ]
+    },
+    {
+      "category": "Financial Health",
+      "habits": [
+        {
+          "name": "Create a budget",
+          "description": "Track income and expenses systematically",
+          "benefits": [
+            "Improves financial awareness",
+            "Reduces unnecessary spending",
+            "Helps achieve financial goals"
+          ]
+        },
+        {
+          "name": "Save 20% of income",
+          "description": "Consistently set aside a portion of earnings",
+          "benefits": [
+            "Builds financial security",
+            "Prepares for emergencies",
+            "Creates investment opportunities"
+          ]
+        },
+        {
+          "name": "Invest regularly",
+          "description": "Consistently contribute to investment accounts",
+          "benefits": [
+            "Builds long-term wealth",
+            "Leverages compound interest",
+            "Provides financial flexibility"
+          ]
+        }
+      ]
+    }
+  ]
+}

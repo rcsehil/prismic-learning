@@ -1,0 +1,27 @@
+{
+  "format": "custom",
+  "id": "habit_categories",
+  "label": "Habit Categories",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "categories": {
+        "type": "Group",
+        "config": {
+          "label": "categories",
+          "repeat": true,
+          "fields": {
+            "category_name": {
+              "type": "Text",
+              "config": {
+                "label": "category_name",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
