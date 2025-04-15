@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a Habits Library page.
+All Habit content is served from Prismic.io
 
-## Getting Started
-
-First, run the development server:
-
+## Working with the project
 ```bash
+# start the dev server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# start slice-machine
+npx @slicemachine/init@latest
+
+# running tests
+npm run test
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## GenAI Collaboration
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### AI-Assisted Development
+This project was developed with the assistance of generative AI tools, specifically:
 
-## Learn More
+#### Tools Used
+- **Primary AI Assistant**: Windsurf
+- **Collaboration Approach**: Pair programming with AI, content generation for site
 
-To learn more about Next.js, take a look at the following resources:
+#### AI Contribution Areas
+- Code generation
+- Debugging
+- Architecture suggestions
+- Refactoring
+- Documentation assistance
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Ethical AI Usage Guidelines
+- All AI-generated code is reviewed and approved by human developers
+- AI suggestions are treated as recommendations, not absolute solutions
+- Critical thinking and human judgment are applied to all AI-generated content
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+#### Transparency
+- AI contributions are used to enhance productivity and explore innovative solutions
+- The final implementation and architectural decisions remain human-driven
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Limitations and Disclaimer
+While AI assists in development, it does not replace:
+- Human creativity
+- Critical problem-solving
+- Comprehensive understanding of project requirements

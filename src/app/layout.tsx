@@ -24,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <script async defer src="https://static.cdn.prismic.io/prismic.js?new=true&repo=rcsehil"></script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
