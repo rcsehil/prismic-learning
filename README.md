@@ -12,8 +12,11 @@ npm run dev
 # start slice-machine
 npx @slicemachine/init@latest
 
-# running tests
+# running unit tests
 npm run test
+
+# running playwright tests
+npm run test:playwright
 ```
 
 With the dev server running, open [http://localhost:3000](http://localhost:3000) with your browser to see the site.
@@ -56,7 +59,7 @@ While AI assists in development, it does not replace:
 - Comprehensive understanding of project requirements
 
 ## Future improvements
-
+- Rewrite playwright tests, no time to do that now.
 - Add a CI/CD pipeline.
 - Deploy to Vercel.
 - Refactor the Habits Library page:
