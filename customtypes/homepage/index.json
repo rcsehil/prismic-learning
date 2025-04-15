@@ -21,9 +21,6 @@
           "choices": {
             "call_to_action": {
               "type": "SharedSlice"
-            },
-            "test_slice": {
-              "type": "SharedSlice"
             }
           }
         }

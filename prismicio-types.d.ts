@@ -5,82 +5,6 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
 /**
- * Content for Blog post documents
- */
-interface BlogPostDocumentData {
-  /**
-   * Title field in *Blog post*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: Blog post title
-   * - **API ID Path**: blog_post.title
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * Description field in *Blog post*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Blog post desc
-   * - **API ID Path**: blog_post.description
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  description: prismic.RichTextField;
-
-  /**
-   * Content field in *Blog post*
-   *
-   * - **Field Type**: Rich Text
-   * - **Placeholder**: Blog post content
-   * - **API ID Path**: blog_post.content
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-   */
-  content: prismic.RichTextField;
-
-  /**
-   * Featured image field in *Blog post*
-   *
-   * - **Field Type**: Image
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.featured_image
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#image
-   */
-  featured_image: prismic.ImageField<never>;
-
-  /**
-   * Publication date field in *Blog post*
-   *
-   * - **Field Type**: Date
-   * - **Placeholder**: *None*
-   * - **API ID Path**: blog_post.publication_date
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#date
-   */
-  publication_date: prismic.DateField;
-}
-
-/**
- * Blog post document from Prismic
- *
- * - **API ID**: `blog_post`
- * - **Repeatable**: `true`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type BlogPostDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithUID<
-    Simplify<BlogPostDocumentData>,
-    "blog_post",
-    Lang
-  >;
-
-/**
  * Item in *Habit → Benefits*
  */
 export interface HabitDocumentDataBenefitsItem {
@@ -192,55 +116,6 @@ export type HabitDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<HabitDocumentData>, "habit", Lang>;
 
 /**
- * Item in *Habit Categories → categories*
- */
-export interface HabitCategoriesDocumentDataCategoriesItem {
-  /**
-   * category_name field in *Habit Categories → categories*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: habit_categories.categories[].category_name
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  category_name: prismic.KeyTextField;
-}
-
-/**
- * Content for Habit Categories documents
- */
-interface HabitCategoriesDocumentData {
-  /**
-   * categories field in *Habit Categories*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: habit_categories.categories[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  categories: prismic.GroupField<
-    Simplify<HabitCategoriesDocumentDataCategoriesItem>
-  >;
-}
-
-/**
- * Habit Categories document from Prismic
- *
- * - **API ID**: `habit_categories`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type HabitCategoriesDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<HabitCategoriesDocumentData>,
-    "habit_categories",
-    Lang
-  >;
-
-/**
  * Content for Habit Category documents
  */
 interface HabitCategoryDocumentData {
@@ -283,7 +158,7 @@ export type HabitCategoryDocument<Lang extends string = string> =
     Lang
   >;
 
-type HomepageDocumentDataSlicesSlice = CallToActionSlice | TestSliceSlice;
+type HomepageDocumentDataSlicesSlice = CallToActionSlice;
 
 /**
  * Content for Homepage documents
@@ -356,65 +231,6 @@ export type HomepageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithoutUID<
     Simplify<HomepageDocumentData>,
     "homepage",
-    Lang
-  >;
-
-/**
- * Item in *Navigation → Navigation items*
- */
-export interface NavigationDocumentDataNavigationItemsItem {
-  /**
-   * title field in *Navigation → Navigation items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.navigation_items[].title
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  title: prismic.KeyTextField;
-
-  /**
-   * page field in *Navigation → Navigation items*
-   *
-   * - **Field Type**: Text
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.navigation_items[].page
-   * - **Documentation**: https://prismic.io/docs/field#key-text
-   */
-  page: prismic.KeyTextField;
-}
-
-/**
- * Content for Navigation documents
- */
-interface NavigationDocumentData {
-  /**
-   * Navigation items field in *Navigation*
-   *
-   * - **Field Type**: Group
-   * - **Placeholder**: *None*
-   * - **API ID Path**: navigation.navigation_items[]
-   * - **Tab**: Main
-   * - **Documentation**: https://prismic.io/docs/field#group
-   */
-  navigation_items: prismic.GroupField<
-    Simplify<NavigationDocumentDataNavigationItemsItem>
-  >;
-}
-
-/**
- * Navigation document from Prismic
- *
- * - **API ID**: `navigation`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type NavigationDocument<Lang extends string = string> =
-  prismic.PrismicDocumentWithoutUID<
-    Simplify<NavigationDocumentData>,
-    "navigation",
     Lang
   >;
 
@@ -491,12 +307,9 @@ export type PageDocument<Lang extends string = string> =
   prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
 export type AllDocumentTypes =
-  | BlogPostDocument
   | HabitDocument
-  | HabitCategoriesDocument
   | HabitCategoryDocument
   | HomepageDocument
-  | NavigationDocument
   | PageDocument;
 
 declare module "@prismicio/client" {
@@ -520,22 +333,14 @@ declare module "@prismicio/client" {
 
   namespace Content {
     export type {
-      BlogPostDocument,
-      BlogPostDocumentData,
       HabitDocument,
       HabitDocumentData,
       HabitDocumentDataBenefitsItem,
-      HabitCategoriesDocument,
-      HabitCategoriesDocumentData,
-      HabitCategoriesDocumentDataCategoriesItem,
       HabitCategoryDocument,
       HabitCategoryDocumentData,
       HomepageDocument,
       HomepageDocumentData,
       HomepageDocumentDataSlicesSlice,
-      NavigationDocument,
-      NavigationDocumentData,
-      NavigationDocumentDataNavigationItemsItem,
       PageDocument,
       PageDocumentData,
       PageDocumentDataSlicesSlice,
